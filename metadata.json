@@ -1,0 +1,6 @@
+{
+  "name": "Janjatiya Vidya Setu (JVS)",
+  "description": "Policy-to-Workflow Intelligence Platform for Ministry of Tribal Affairs (MoTA) Scholarships and Fellowships",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

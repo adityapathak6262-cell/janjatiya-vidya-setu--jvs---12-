@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1400, initial-scale=1.0">
+  <title>Janjatiya Vidya Setu - SIH Technical Architecture Diagram</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background: #090d16;
+      color: #f1f5f9;
+      width: 1400px;
+      min-height: 820px;
+      padding: 32px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+    .brand-title {
+      font-size: 26px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge-sih {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #000;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+    .mota-tag {
+      text-align: right;
+    }
+    .mota-tag .gov {
+      font-size: 12px;
+      font-weight: 700;
+      color: #f59e0b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .mota-tag .sub {
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    /* Architecture Grid */
+    .flow-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .column-box {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .column-box:hover {
+      border-color: #f59e0b;
+    }
+    .col-header {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .c1 { border-top: 4px solid #3b82f6; }
+    .c1 .col-header { color: #60a5fa; }
+    
+    .c2 { border-top: 4px solid #8b5cf6; }
+    .c2 .col-header { color: #a78bfa; }
+    
+    .c3 { border-top: 4px solid #f59e0b; }
+    .c3 .col-header { color: #fbbf24; }
+    
+    .c4 { border-top: 4px solid #10b981; }
+    .c4 .col-header { color: #34d399; }
+    
+    .c5 { border-top: 4px solid #06b6d4; }
+    .c5 .col-header { color: #22d3ee; }
+
+    .node {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 1.4;
+      transition: all 0.2s ease;
+    }
+    .node strong {
+      display: block;
+      color: #f8fafc;
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+    .node span {
+      display: block;
+      color: #94a3b8;
+      font-size: 10.5px;
+    }
+    .node.highlight {
+      background: #172554;
+      border-color: #3b82f6;
+    }
+    .node.warning {
+      background: #2d1515;
+      border-color: #ef4444;
+    }
+    .node.success {
+      background: #062e24;
+      border-color: #10b981;
+    }
+    .node.gold {
+      background: #2b1f09;
+      border-color: #f59e0b;
+    }
+
+    .arrow-right {
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: #334155;
+      border: 2px solid #090d16;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 900;
+      color: #f59e0b;
+      z-index: 10;
+    }
+
+    /* Bottom KPI Stats Strip */
+    .kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+    .kpi-item {
+      border-right: 1px solid #1e293b;
+      padding-right: 16px;
+    }
+    .kpi-item:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+    .kpi-num {
+      font-size: 24px;
+      font-weight: 900;
+      color: #f59e0b;
+      font-family: monospace;
+      letter-spacing: -0.5px;
+    }
+    .kpi-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-top: 2px;
+    }
+    .kpi-desc {
+      font-size: 10.5px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="brand-title">
+        <span>🏛️ JANJATIYA VIDYA SETU</span>
+        <span class="badge-sih">SIH 2026 Innovation</span>
+      </div>
+      <div class="subtitle">End-to-End AI-Enabled Scholarship & Fellowship Management Architecture for Scheduled Tribes</div>
+    </div>
+    <div class="mota-tag">
+      <div class="gov">Ministry of Tribal Affairs</div>
+      <div class="sub">Government of India · Production-Ready Operating System</div>
+    </div>
+  </div>
+
+  <!-- 5-STAGE ARCHITECTURAL PIPELINE -->
+  <div class="flow-container">
+
+    <!-- STAGE 1 -->
+    <div class="column-box c1">
+      <div class="col-header">
+        <span>1. Policy Configuration</span>
+        <span>STAGE I</span>
+      </div>
+      <div class="node gold">
+        <strong>📄 MoTA Gazette & Circulars</strong>
+        <span>Unformatted scheme PDFs & notifications</span>
+      </div>
+      <div class="node">
+        <strong>🤖 AI Policy Compiler</strong>
+        <span>Gemini 3.8 extracts executable JSON schema</span>
+      </div>
+      <div class="node">
+        <strong>🎛️ Visual Rules Builder</strong>
+        <span>No-code sliders: Income, Marks cutoff, QS Rank</span>
+      </div>
+      <div class="node highlight">
+        <strong>⚙️ Version Governance</strong>
+        <span>Draft ➔ Approved ➔ Published (Zero Downtime)</span>
+      </div>
+      <div class="arrow-right">➔</div>
+    </div>
+
+    <!-- STAGE 2 -->
+    <div class="column-box c2">
+      <div class="col-header">
+        <span>2. Applicant Ingestion</span>
+        <span>STAGE II</span>
+      </div>
+      <div class="node">
+        <strong>🌐 Unified Multi-Scheme Portal</strong>
+        <span>Single desk for NFST, NOS & Top-Class</span>
+      </div>
+      <div class="node">
+        <strong>🆔 OTR & Dynamic Wizard</strong>
+        <span>Auto-generated fields based on active policy</span>
+      </div>
+      <div class="node highlight">
+        <strong>🌲 ITDA Offline Mode</strong>
+        <span>Remote forest PWA for PVTG tribes</span>
+      </div>
+      <div class="node">
+        <strong>🔒 Client SHA-256 Vault</strong>
+        <span>Tamper-evident client document fingerprint</span>
+      </div>
+      <div class="arrow-right">➔</div>
+    </div>
+
+    <!-- STAGE 3 -->
+    <div class="column-box c3">
+      <div class="col-header">
+        <span>3. PRAMAAN AI Engine</span>
+        <span>STAGE III</span>
+      </div>
+      <div class="node highlight">
+        <strong>🔍 Path A: Evidence Cross-Check</strong>
+        <span>OCR mark extraction & tribal clan/gotra match</span>
+      </div>
+      <div class="node highlight">
+        <strong>🏛️ Path B: Credential Graph</strong>
+        <span>Aadhaar CIDR + PFMS DBT + AISHE verification</span>
+      </div>
+      <div class="node warning">
+        <strong>🛡️ ZK Anti-Double Dipping</strong>
+        <span>Detects duplicate central fellowship claims</span>
+      </div>
+      <div class="node gold">
+        <strong>🏫 Nodal Cartel Anomaly</strong>
+        <span>Flags ghost institute quota breaches</span>
+      </div>
+      <div class="arrow-right">➔</div>
+    </div>
+
+    <!-- STAGE 4 -->
+    <div class="column-box c4">
+      <div class="col-header">
+        <span>4. Resolution & Scrutiny</span>
+        <span>STAGE IV</span>
+      </div>
+      <div class="node warning">
+        <strong>🚨 3W Deficiency Lifecycle</strong>
+        <span>WHAT, WHY, ACTION (7-Day Cure Window)</span>
+      </div>
+      <div class="node">
+        <strong>⚖️ Scrutiny Committee (0-100)</strong>
+        <span>Human-in-the-loop scoring & recommendation</span>
+      </div>
+      <div class="node success">
+        <strong>🎯 Statutory Quota Engine</strong>
+        <span>Divyangjan (5%), PVTG (10%), Female (33%)</span>
+      </div>
+      <div class="node success">
+        <strong>📜 MoTA Sanction Order</strong>
+        <span>Official Ref: MoTA/2026/NFST/MERIT-0914</span>
+      </div>
+      <div class="arrow-right">➔</div>
+    </div>
+
+    <!-- STAGE 5 -->
+    <div class="column-box c5">
+      <div class="col-header">
+        <span>5. Post-Selection & Audit</span>
+        <span>STAGE V</span>
+      </div>
+      <div class="node success">
+        <strong>💸 DBT Treasury Pipeline</strong>
+        <span>Joining ➔ PFMS Mandate ➔ Direct Benefit</span>
+      </div>
+      <div class="node highlight">
+        <strong>🔄 Continuity Engine (Y1–Y5)</strong>
+        <span>Dropout prevention & proactive risk scoring</span>
+      </div>
+      <div class="node">
+        <strong>⏱️ Delay SLA Monitor</strong>
+        <span>Aging buckets (<3d, 4-7d, >14d) + Nudge</span>
+      </div>
+      <div class="node gold">
+        <strong>⛓️ SHA-256 Blockchain Audit</strong>
+        <span>Zero-tamper immutable cryptographic chain</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- IMPACT & METRICS STRIP -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-num">21d ➔ 48h</div>
+      <div class="kpi-label">SLA Turnaround Reduction</div>
+      <div class="kpi-desc">Automated PRAMAAN scrutiny cuts processing time by 90%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-num">₹45+ Cr</div>
+      <div class="kpi-label">Annual Leakage Prevented</div>
+      <div class="kpi-desc">Cross-scheme de-duplication stops dual-scholarship fraud</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-num">100%</div>
+      <div class="kpi-label">Statutory Quota Guarantee</div>
+      <div class="kpi-desc">Automated reservation for Divyangjan, PVTG & ST Women</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-num">28% ➔ <3%</div>
+      <div class="kpi-label">Multi-Year Dropout Rate</div>
+      <div class="kpi-desc">Continuity Engine ensures seamless Year 2–5 fellowship renewals</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>Platform: Janjatiya Vidya Setu (JVS) · Smart India Hackathon 2026 Submission</div>
+    <div>Live URL: https://ais-pre-rtsnf6fyi363akqyl3s7h7-634298445256.asia-southeast1.run.app</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Border -->
+  <rect x="2" y="2" width="1196" height="676" fill="none" stroke="#1e293b" stroke-width="2" rx="14"/>
+
+  <!-- Header Banner -->
+  <rect x="30" y="24" width="1140" height="70" fill="#0f172a" stroke="#334155" rx="10"/>
+  <text x="50" y="54" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="900" letter-spacing="-0.5">🏛️ JANJATIYA VIDYA SETU (JVS)</text>
+  <text x="50" y="75" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">AI-Enabled Scholarship &amp; Fellowship Management Operating System · Ministry of Tribal Affairs (MoTA)</text>
+  
+  <rect x="980" y="40" width="170" height="36" fill="url(#goldGrad)" rx="6"/>
+  <text x="1065" y="63" fill="#000000" font-family="system-ui, sans-serif" font-size="11" font-weight="900" text-anchor="middle" letter-spacing="0.5">SIH 2026 ARCHITECTURE</text>
+
+  <!-- Column 1: Policy Configuration -->
+  <g transform="translate(30, 115)">
+    <rect width="215" height="420" fill="#0f172a" stroke="#3b82f6" stroke-width="2" rx="10"/>
+    <rect width="215" height="34" fill="#1e3a8a" rx="10"/>
+    <rect y="24" width="215" height="10" fill="#1e3a8a"/>
+    <text x="107" y="22" fill="#bfdbfe" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">1. POLICY CONFIGURATION</text>
+    
+    <!-- Node 1.1 -->
+    <rect x="12" y="48" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="70" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">📄 MoTA Gazette Circulars</text>
+    <text x="22" y="90" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Unformatted scheme rules PDF</text>
+
+    <!-- Node 1.2 -->
+    <rect x="12" y="122" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="144" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🤖 AI Policy Compiler</text>
+    <text x="22" y="164" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Gemini 3.8 extracts JSON schema</text>
+
+    <!-- Node 1.3 -->
+    <rect x="12" y="196" width="191" height="62" fill="#172554" stroke="#3b82f6" rx="6"/>
+    <text x="22" y="218" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🎛️ Visual Rules Builder</text>
+    <text x="22" y="238" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">No-code sliders: Income, Marks</text>
+
+    <!-- Node 1.4 -->
+    <rect x="12" y="270" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="292" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⚙️ Version Governance</text>
+    <text x="22" y="312" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Draft ➔ Approved ➔ Published</text>
+
+    <!-- Node 1.5 -->
+    <rect x="12" y="344" width="191" height="62" fill="#2b1f09" stroke="#f59e0b" rx="6"/>
+    <text x="22" y="366" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🔄 Zero-Downtime Rollback</text>
+    <text x="22" y="386" fill="#fde68a" font-family="system-ui, sans-serif" font-size="10">Instant switch to prior policy</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 245 325 L 260 325" stroke="#f59e0b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Column 2: Ingestion & OTR -->
+  <g transform="translate(260, 115)">
+    <rect width="215" height="420" fill="#0f172a" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+    <rect width="215" height="34" fill="#4c1d95" rx="10"/>
+    <rect y="24" width="215" height="10" fill="#4c1d95"/>
+    <text x="107" y="22" fill="#ddd6fe" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">2. INGESTION &amp; OTR</text>
+    
+    <!-- Node 2.1 -->
+    <rect x="12" y="48" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="70" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🌐 Unified Multi-Scheme</text>
+    <text x="22" y="90" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Single desk for NFST, NOS, Top</text>
+
+    <!-- Node 2.2 -->
+    <rect x="12" y="122" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="144" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🆔 Dynamic 4-Step Form</text>
+    <text x="22" y="164" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Auto-configured per active policy</text>
+
+    <!-- Node 2.3 -->
+    <rect x="12" y="196" width="191" height="62" fill="#2e1065" stroke="#8b5cf6" rx="6"/>
+    <text x="22" y="218" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🌲 ITDA Offline Mode</text>
+    <text x="22" y="238" fill="#ede9fe" font-family="system-ui, sans-serif" font-size="10">Forest belt PWA for PVTG tribes</text>
+
+    <!-- Node 2.4 -->
+    <rect x="12" y="270" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="292" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🔒 SHA-256 Vault</text>
+    <text x="22" y="312" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Client-side file fingerprinting</text>
+
+    <!-- Node 2.5 -->
+    <rect x="12" y="344" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="366" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🤖 Setu Mitra Guide</text>
+    <text x="22" y="386" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Contextual bilingual AI support</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 475 325 L 490 325" stroke="#f59e0b" stroke-width="3" fill="none"/>
+
+  <!-- Column 3: PRAMAAN AI Scrutiny -->
+  <g transform="translate(490, 115)">
+    <rect width="220" height="420" fill="#0f172a" stroke="#f59e0b" stroke-width="2" rx="10"/>
+    <rect width="220" height="34" fill="#78350f" rx="10"/>
+    <rect y="24" width="220" height="10" fill="#78350f"/>
+    <text x="110" y="22" fill="#fef3c7" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">3. PRAMAAN AI ENGINE</text>
+    
+    <!-- Node 3.1 -->
+    <rect x="12" y="48" width="196" height="62" fill="#172554" stroke="#3b82f6" rx="6"/>
+    <text x="22" y="70" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🔍 Path A: Evidence OCR</text>
+    <text x="22" y="90" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">Levenshtein similarity &amp; marks</text>
+
+    <!-- Node 3.2 -->
+    <rect x="12" y="122" width="196" height="62" fill="#172554" stroke="#3b82f6" rx="6"/>
+    <text x="22" y="144" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🧬 Clan &amp; Kinship Match</text>
+    <text x="22" y="164" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">Gotra/lineage alias affirmation</text>
+
+    <!-- Node 3.3 -->
+    <rect x="12" y="196" width="196" height="62" fill="#064e3b" stroke="#10b981" rx="6"/>
+    <text x="22" y="218" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🏛️ Path B: Credential Graph</text>
+    <text x="22" y="238" fill="#d1fae5" font-family="system-ui, sans-serif" font-size="10">Aadhaar + PFMS DBT + AISHE</text>
+
+    <!-- Node 3.4 -->
+    <rect x="12" y="270" width="196" height="62" fill="#450a0a" stroke="#ef4444" rx="6"/>
+    <text x="22" y="292" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🛡️ Anti-Double Dipping</text>
+    <text x="22" y="312" fill="#fee2e2" font-family="system-ui, sans-serif" font-size="10">Cross-scheme fingerprint match</text>
+
+    <!-- Node 3.5 -->
+    <rect x="12" y="344" width="196" height="62" fill="#450a0a" stroke="#ef4444" rx="6"/>
+    <text x="22" y="366" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🏫 Quota Cartel Alert</text>
+    <text x="22" y="386" fill="#fee2e2" font-family="system-ui, sans-serif" font-size="10">Flags institute capacity surge</text>
+  </g>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 710 325 L 725 325" stroke="#f59e0b" stroke-width="3" fill="none"/>
+
+  <!-- Column 4: Resolution & Selection -->
+  <g transform="translate(725, 115)">
+    <rect width="215" height="420" fill="#0f172a" stroke="#10b981" stroke-width="2" rx="10"/>
+    <rect width="215" height="34" fill="#064e3b" rx="10"/>
+    <rect y="24" width="215" height="10" fill="#064e3b"/>
+    <text x="107" y="22" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">4. SELECTION &amp; RESOLUTION</text>
+    
+    <!-- Node 4.1 -->
+    <rect x="12" y="48" width="191" height="62" fill="#450a0a" stroke="#ef4444" rx="6"/>
+    <text x="22" y="70" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🚨 3W Deficiency Notice</text>
+    <text x="22" y="90" fill="#fee2e2" font-family="system-ui, sans-serif" font-size="10">What / Why / Action (7d SLA)</text>
+
+    <!-- Node 4.2 -->
+    <rect x="12" y="122" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="144" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⚖️ Scrutiny Committee</text>
+    <text x="22" y="164" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Human-in-loop scoring 0–100</text>
+
+    <!-- Node 4.3 -->
+    <rect x="12" y="196" width="191" height="62" fill="#064e3b" stroke="#10b981" rx="6"/>
+    <text x="22" y="218" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🎯 Quota Allocator</text>
+    <text x="22" y="238" fill="#d1fae5" font-family="system-ui, sans-serif" font-size="10">Divyang 5%, PVTG 10%, W 33%</text>
+
+    <!-- Node 4.4 -->
+    <rect x="12" y="270" width="191" height="62" fill="#064e3b" stroke="#10b981" rx="6"/>
+    <text x="22" y="292" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">📜 MoTA Sanction Order</text>
+    <text x="22" y="312" fill="#d1fae5" font-family="system-ui, sans-serif" font-size="10">Ref: MoTA/2026/NFST/0914</text>
+
+    <!-- Node 4.5 -->
+    <rect x="12" y="344" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="366" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⚖️ Rule 144 GFR Memo</text>
+    <text x="22" y="386" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Statutory clause legal immunity</text>
+  </g>
+
+  <!-- Arrow 4 to 5 -->
+  <path d="M 940 325 L 955 325" stroke="#f59e0b" stroke-width="3" fill="none"/>
+
+  <!-- Column 5: Post-Selection & Audit -->
+  <g transform="translate(955, 115)">
+    <rect width="215" height="420" fill="#0f172a" stroke="#06b6d4" stroke-width="2" rx="10"/>
+    <rect width="215" height="34" fill="#164e63" rx="10"/>
+    <rect y="24" width="215" height="10" fill="#164e63"/>
+    <text x="107" y="22" fill="#cffafe" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">5. POST-SELECTION &amp; AUDIT</text>
+    
+    <!-- Node 5.1 -->
+    <rect x="12" y="48" width="191" height="62" fill="#064e3b" stroke="#10b981" rx="6"/>
+    <text x="22" y="70" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">💸 DBT Treasury Pipeline</text>
+    <text x="22" y="90" fill="#d1fae5" font-family="system-ui, sans-serif" font-size="10">Joining ➔ Mandate ➔ Disbursal</text>
+
+    <!-- Node 5.2 -->
+    <rect x="12" y="122" width="191" height="62" fill="#172554" stroke="#3b82f6" rx="6"/>
+    <text x="22" y="144" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🔄 Continuity Engine</text>
+    <text x="22" y="164" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">Years 1–5 dropout prevention</text>
+
+    <!-- Node 5.3 -->
+    <rect x="12" y="196" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="218" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⏱️ SLA Delay Monitor</text>
+    <text x="22" y="238" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Aging buckets: &lt;3d, 4-7d, &gt;14d</text>
+
+    <!-- Node 5.4 -->
+    <rect x="12" y="270" width="191" height="62" fill="#1e293b" stroke="#334155" rx="6"/>
+    <text x="22" y="292" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🔔 Admin Nudge</text>
+    <text x="22" y="312" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Auto-escalates nodal backlogs</text>
+
+    <!-- Node 5.5 -->
+    <rect x="12" y="344" width="191" height="62" fill="#2b1f09" stroke="#f59e0b" rx="6"/>
+    <text x="22" y="366" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⛓️ SHA-256 Blockchain</text>
+    <text x="22" y="386" fill="#fde68a" font-family="system-ui, sans-serif" font-size="10">Immutable tamper audit proof</text>
+  </g>
+
+  <!-- Bottom Metric Strip -->
+  <g transform="translate(30, 555)">
+    <rect width="1140" height="95" fill="#0f172a" stroke="#1e293b" rx="10"/>
+
+    <!-- Stat 1 -->
+    <text x="50" y="590" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="22" font-weight="900">21 Days ➔ &lt; 48 Hrs</text>
+    <text x="50" y="610" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="700">90% Turnaround Reduction</text>
+    <text x="50" y="628" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Automated eligibility scrutiny</text>
+
+    <line x1="320" y1="570" x2="320" y2="635" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- Stat 2 -->
+    <text x="350" y="590" fill="#10b981" font-family="system-ui, sans-serif" font-size="22" font-weight="900">₹45+ Crores Saved</text>
+    <text x="350" y="610" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Anti-Double Dipping Engine</text>
+    <text x="350" y="628" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Zero dual-scholarship fraud</text>
+
+    <line x1="620" y1="570" x2="620" y2="635" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- Stat 3 -->
+    <text x="650" y="590" fill="#a855f7" font-family="system-ui, sans-serif" font-size="22" font-weight="900">100% Guaranteed</text>
+    <text x="650" y="610" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Statutory Quota Fulfillment</text>
+    <text x="650" y="628" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Divyangjan, PVTG &amp; Female</text>
+
+    <line x1="910" y1="570" x2="910" y2="635" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- Stat 4 -->
+    <text x="940" y="590" fill="#06b6d4" font-family="system-ui, sans-serif" font-size="22" font-weight="900">28% ➔ &lt; 3%</text>
+    <text x="940" y="610" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Scholar Dropout Rate</text>
+    <text x="940" y="628" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Multi-year continuity tracking</text>
+  </g>
+
+</svg>
